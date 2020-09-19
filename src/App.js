@@ -1,26 +1,23 @@
-import React from 'react';
-import logo from './logo.svg';
-import './App.css';
+import React, { Component } from "react";
+import axios from "axios";
+import { apiKey } from "./config";
 
-function App() {
-  return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
-  );
+class App extends Component {
+  state = {
+    photos: [],
+  };
+  componentDidMount() {
+    axios
+      .get(
+        `https://www.flickr.com/services/rest/?method=flickr.photos.search&api_key=${apiKey}&media=photos&per_page=24&format=json&nojsoncallback=1`
+      )
+      .then(({ data }) => this.setState({ photos: data.photos.photo }))
+      .catch((err) => console.log(`Error fetching data ${err}`));
+  }
+  render() {
+    console.log(this.state.photos);
+    return <div></div>;
+  }
 }
 
 export default App;
