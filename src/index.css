@@ -5,10 +5,11 @@ code {
 body {
   margin: 0;
   text-align: center;
-  font-family: "Open Sans", sans-serif;
-  color: #3f4850;
+  font-family: "Grandstander", cursive;
+  color: #0da7b8;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
+  background-color: #343752;
 }
 
 h2 {
@@ -34,7 +35,7 @@ a {
 
 .search-form button {
   outline: none;
-  background-color: #438bbd;
+  background-color: #0da7b8;
   border: none;
   padding: 0px 15px;
   border-radius: 0 0.35em 0.35em 0;
@@ -50,6 +51,7 @@ input {
   border-right: none;
   border-radius: 0.35em 0 0 0.35em;
   outline: none;
+  font-family: "Grandstander", cursive;
 }
 
 .main-nav li {
@@ -59,7 +61,7 @@ input {
 
 .main-nav a {
   display: block;
-  background: #438bbd;
+  background: #0da7b8;
   border-radius: 3px;
   padding: 5px;
   color: #fff;
@@ -68,7 +70,7 @@ input {
 .main-nav .active,
 .main-nav a:hover,
 .search-form button:hover {
-  background-color: #275270;
+  background-color: #ffbe33;
 }
 
 .photo-container ul {
@@ -84,6 +86,9 @@ input {
   height: 165px;
   overflow: hidden;
   margin-bottom: 15px;
+  border-radius: 5px;
+  border: 3px solid #ffbe33;
+  box-shadow: 0px 4px 8px #212112;
 }
 
 .photo-container ul img {
@@ -99,7 +104,10 @@ input {
 .photo-container .not-found {
   width: 100%;
 }
-
+.loading {
+  font-size: 57px;
+  color: #ffbe33;
+}
 @media only screen and (max-width: 767px) {
   body {
     padding-top: 2em;

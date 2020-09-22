@@ -1,4 +1,42 @@
+# techdegree-project-7
+
+Image gallery application.
+
+# Table of contents
+
+- [General information](#general-information)
+- [Tehnologies](#tehnologies)
+- [Setup](#setup)
+- [Available Scripts](#available-scripts)
+
+# General information
+
+Image gallery application, created with the very popular and in-demand React library. With the help of this powerful "MVC" (Model, View, Controller) library, the app is built in the style of modern single page applications to keep it fast, modular, and in sync with current web development trends.
+
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+
+# Tehnologies
+
+- React version: v16.13.1
+- React-DOM version: v16.13.1
+- React-Router-DOM version: v5.2.0
+- Prop-Types version: v15.7.2
+
+* Axios version: 0.20.0
+
+# Setup
+
+Copy repository https://github.com/davisski/techdegree-project-7.git
+
+```
+$ git clone https://github.com/davisski/techdegree-project-7.git
+$ cd /techdegree-project-7
+$ npm install
+$ npm start
+
+```
+
+To fetch data from flickr API you have to make config.js file in /src directory of project. In config.js you must have export const apiKey variable with value of API_KEY from your account in flickr.com. Import it in App.js an that's it.
 
 ## Available Scripts
 
