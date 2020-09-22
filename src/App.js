@@ -19,7 +19,7 @@ const key = apiKey;
  * @method {dogTopic} - Fetc data from flickr api by tag name dog.
  * @method {computerTopic} - Fetc data from flickr api by tag name computers.
  * @method {fetchData} - Returns promise.
- *
+ * @method {handleError} - Handles error message.
  */
 class App extends Component {
   state = {
@@ -41,7 +41,7 @@ class App extends Component {
     );
   };
   handleError = (err) => {
-    return console.log(`Error fetching and parsing data ${err}`);
+    console.log(`Error fetching and parsing data ${err}`);
   };
   searchByQuery = (query) => {
     this.setState({ loading: true }, () => {
