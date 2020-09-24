@@ -5,7 +5,7 @@ import Nav from "./components/Nav";
 import PhotoContainer from "./components/PhotoContainer";
 import SearchForm from "./components/SearchForm";
 import { Route, Switch, Redirect } from "react-router-dom";
-
+import ErrorComponent from "./components/ErrorComponent";
 /**
  * @constant {key} - To store API_KEY value.
  */
@@ -128,6 +128,7 @@ class App extends Component {
               }
             />
           ))}
+          <Route path="*" render={() => <ErrorComponent />} />
         </Switch>
       </div>
     );
